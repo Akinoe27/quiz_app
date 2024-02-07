@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Quiz Game{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"
+    style="background: linear-gradient(135deg, #0066ff, #66ccff)">
+        <div class="container">
+            <a class="navbar-brand" style="color: white"  href="/"><strong>Guess What?</strong></a>
+
+
+            <div class="navbar-nav" id="navbarNav">
+                <a class="nav-link" href="/highscores" style="color: white"
+                  ><strong>Scores <i class="bi bi-house"></i></strong
+                ></a>
+              </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        <!-- Content will be injected here -->
+        {% endblock %}
+    </div>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
