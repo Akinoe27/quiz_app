@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Welcome to the Quiz Game!{% endblock %}
+
+{% block content %}
+<div class="vh-100 d-flex justify-content-center align-items-center">
+    <div class="text-center">
+        <h1 style="color: #056bff" class="display-4 mb-4"><strong>Ready to take the Challenge!</strong></h1>
+        <form action="/start_game" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="player_name" placeholder="Please enter your name" required autofocus>
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary mt-3">Start Now</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
