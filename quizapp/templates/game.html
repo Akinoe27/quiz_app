@@ -7,8 +7,8 @@
             <h2>Score: {{ session['score'] }}</h2>
         </div>
         <div class="col-12 mb-3">
-            <img src="{{ url_for('static', filename=question['image_url']) }}" alt="Random Image" class="img-fluid" width="350px"
-            height="250px">
+            <img src="{{ url_for('static', filename=question['image_url']) }}" alt="Random Image" class="img-fluid" width="300px"
+            height="300px">
         </div>
         <div class="col-12">
             <form action="{{ url_for('answer') }}" method="post" class="d-grid gap-2">
